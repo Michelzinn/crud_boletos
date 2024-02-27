@@ -369,3 +369,398 @@ FOREIGN KEY ("paid_by_id")
   [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240217180804') RETURNING "version"[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2024-02-27 15:18:48 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.3ms | Allocations: 577)
+Completed 200 OK in 28ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 7330)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:19:17 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 24)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 356)
+
+
+Started GET "/331" for ::1 at 2024-02-27 15:19:28 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/331"):
+  
+Started GET "/up" for ::1 at 2024-02-27 15:19:50 -0300
+Processing by Rails::HealthController#show as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1100)
+
+
+Started GET "/up" for ::1 at 2024-02-27 15:19:56 -0300
+Processing by Rails::HealthController#show as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 775)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:19:59 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 493)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1544)
+
+
+Started GET "/343" for ::1 at 2024-02-27 15:23:38 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/343"):
+  
+Started GET "/rails/info/routes?query=slip" for ::1 at 2024-02-27 15:23:42 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"query"=>"slip"}
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 9876)
+
+
+Started GET "/rails/info/routes?query=sl" for ::1 at 2024-02-27 15:23:43 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"query"=>"sl"}
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 8537)
+
+
+Started GET "/rails/info/routes?query=sl" for ::1 at 2024-02-27 15:23:44 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"query"=>"sl"}
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 8533)
+
+
+Started GET "/bank_slip" for ::1 at 2024-02-27 15:23:54 -0300
+  
+ActionController::RoutingError (uninitialized constant BankSlipController):
+  
+Started GET "/bank_slip" for ::1 at 2024-02-27 15:24:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/bank_slip"):
+  
+Started GET "/" for ::1 at 2024-02-27 15:24:27 -0300
+  
+NameError (undefined local variable or method `bank_slips_path' for #<ActionDispatch::Routing::Mapper:0x00007f9e18f06758 @set=#<ActionDispatch::Routing::RouteSet:0x0000557aec461c18>, @draw_paths=[#<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/actionview-7.1.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/actionmailbox-7.1.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/importmap-rails-2.0.1/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/tailwindcss-rails-2.3.0-x86_64-linux/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/view_component-3.10.0/config/routes>, #<Pathname:/home/michel/crud_boletos/config/routes>, #<Pathname:/home/michel/crud_boletos/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007f9e18f06708 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x0000557aec6546b0 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>):
+  
+config/routes.rb:4:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2024-02-27 15:24:33 -0300
+  
+NameError (undefined local variable or method `bank_slips_path' for #<ActionDispatch::Routing::Mapper:0x00007f9e08296780 @set=#<ActionDispatch::Routing::RouteSet:0x0000557aec461c18>, @draw_paths=[#<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/actionview-7.1.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/activestorage-7.1.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/actioncable-7.1.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/actionmailbox-7.1.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/actiontext-7.1.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/importmap-rails-2.0.1/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/turbo-rails-2.0.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/stimulus-rails-1.3.3/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/tailwindcss-rails-2.3.0-x86_64-linux/config/routes>, #<Pathname:/home/michel/.asdf/installs/ruby/3.0.1/lib/ruby/gems/3.0.0/gems/view_component-3.10.0/config/routes>, #<Pathname:/home/michel/crud_boletos/config/routes>, #<Pathname:/home/michel/crud_boletos/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007f9e08296730 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x0000557aec6546b0 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>):
+  
+config/routes.rb:5:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2024-02-27 15:25:20 -0300
+  
+ActionController::RoutingError (uninitialized constant BankSlipsController):
+  
+Started GET "/" for ::1 at 2024-02-27 15:25:58 -0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for BankSlipsController):
+  
+actionpack (7.1.3) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-02-27 15:26:10 -0300
+Processing by BankSlipsController#index as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+  
+ActionController::MissingExactTemplate (BankSlipsController#index is missing a template for request formats: text/html):
+  
+actionpack (7.1.3) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.3) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.3) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.3) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+turbo-rails (2.0.3) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.3) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-02-27 15:26:49 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 1.1ms | Allocations: 129)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 1483)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:28:44 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.7ms | Allocations: 136)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1480)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:28:45 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 348)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:29:00 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.4ms | Allocations: 145)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1497)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:29:59 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 349)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:30:00 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:30:00 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:30:01 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:30:03 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:30:13 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.5ms | Allocations: 141)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1485)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:30:13 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 349)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:30:42 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 340)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:30:43 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:30:44 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:30:53 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.4ms | Allocations: 141)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1486)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:30:54 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 349)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:34:34 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 2.2ms | Allocations: 210)
+Completed 200 OK in 35ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 7110)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:34:50 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.1ms | Allocations: 11)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 405)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:35:03 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 339)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:35:03 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering bank_slips/index.html.erb
+  Rendered bank_slips/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 339)
+
+
+Started GET "/" for ::1 at 2024-02-27 15:36:07 -0300
+Processing by BankSlipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bank_slips/index.html.erb within layouts/application
+  Rendered bank_slips/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 515.2ms | Allocations: 152117)
+Completed 200 OK in 518ms (Views: 516.7ms | ActiveRecord: 0.0ms | Allocations: 153346)
+
+
