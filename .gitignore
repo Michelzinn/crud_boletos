@@ -45,3 +45,6 @@ dump.dump
 !/app/assets/builds/.keep
 
 .env
+log/development.log
+storage/development.sqlite3
+storage/test.sqlite3
