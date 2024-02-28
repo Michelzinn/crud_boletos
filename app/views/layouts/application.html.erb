@@ -11,7 +11,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-gray-200">
+  <body class="bg-gray-200 text-gray-600 ">
+    <div class="flex flex-row w-full border bg-white p-3 shadow-sm">
+      <%= link_to "Gerador de boletos", root_path %>
+    </div>
     <main class=" container mx-auto mt-28 px-5 flex flex-col bg-red-100">
       <%= yield %>
     </main>
