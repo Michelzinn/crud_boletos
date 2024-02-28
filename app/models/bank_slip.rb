@@ -1,0 +1,3 @@
+class BankSlip < ApplicationRecord
+
+end

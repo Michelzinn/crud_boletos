@@ -1,6 +1,6 @@
-class CreateBankBillet < ActiveRecord::Migration[7.1]
+class CreateBankSlips< ActiveRecord::Migration[7.1]
   def change
-    create_table :bank_billets do |t|
+    create_table :bank_slips do |t|
       t.string :amount
       t.date :expire_at
 
