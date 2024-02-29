@@ -1,21 +1,114 @@
 <%= turbo_frame_tag "bank_billets_menu", class:"flex flex-row self-center w-4/5" do %>
-  <div class="flex flex-col border rounded  bg-gray-100 shadow-sm w-full self-center justify-center p-3 space-y-5 mb-2">
+  <div class="flex flex-col border rounded  bg-gray-100 shadow-sm w-full self-center justify-center p-4 space-y-5 mb-2">
     <div class="flex flex-row w-full justify-between items-center">
-      <div class=" rounded border text-gray-600 border-gray-300 shadow-sm transition-all duration-100 font-bold text-sm px-2 py-1">Criar novo boleto</div>
+      <div class=" rounded border  bg-white text-gray-600 border-gray-300 shadow-sm transition-all duration-100 font-bold text-sm px-2 py-1">Criar novo boleto</div>
 
       <%= link_to root_path do %>
         <div class="text-white rounded bg-red-500 hover:bg-red-600 transition-all duration-100 font-bold text-sm px-2 py-1">Voltar</div>
       <% end %>
     </div>
 
-    <%= form_with(model: @bank_slip, url: bank_billets_path, method: :post, class: '') do |form| %>
+    <%= form_with(url: bank_billets_path, method: :post, class: 'space-y-2') do |form| %>
       <div class="flex flex-row w-2/4">
         <div class="flex flex-col h-8 mb-4 space-y-1">
-          <div class=" text-sm">Nome</div>
+          <div class=" text-sm">Descrição</div>
           <%= form.text_field :description, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
         </div>
       </div>
-      <%= form.submit "Criar Boleto", class:"mt-4 text-white rounded bg-green-500 hover:bg-green-600 transition-all duration-100 font-bold text-sm px-2 py-1" %>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">Valor</div>
+          <%= form.number_field :amount, step: '0.01', class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6", placeholder: "R$ 0,00" %>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">Data de vencimento:</div>
+          <%= form.date_field :expire_at, class: "p-3 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-full h-6" %>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">CEP</div>
+          <%= form.text_field :customer_zipcode, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">Estado</div>
+          <%= form.select :state, options_for_select(@states), { class: 'p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6' } %>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">Cidade</div>
+          <%= form.text_field :customer_city_name, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">Bairro</div>
+          <%= form.text_field :customer_neighborhood, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">Endereço do cliente</div>
+          <%= form.text_field :customer_address, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">Número</div>
+          <%= form.text_field :customer_address_number, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">Complemento</div>
+          <%= form.text_field :customer_address_complement, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">CNPJ ou CPF</div>
+          <%= form.text_field :customer_cnpj_cpf, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">Email do Cliente</div>
+          <%= form.text_field :customer_email, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">Nome do cliente</div>
+          <%= form.text_field :customer_person_name, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
+          <%= form.hidden_field :customer_person_type, value: "individual"%>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-2/4">
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">Telefone do cliente</div>
+          <%= form.text_field :customer_phone_number, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
+        </div>
+      </div>
+
+      <%= form.submit "Criar Boleto", class:"text-white rounded bg-green-500 hover:bg-green-600 transition-all duration-100 font-bold text-sm px-2 py-1" %>
     <% end %>
   </div>
 <% end %>
