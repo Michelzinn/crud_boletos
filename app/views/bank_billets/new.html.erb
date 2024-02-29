@@ -1,15 +1,21 @@
 <%= turbo_frame_tag "bank_billets_menu", class:"flex flex-row self-center w-4/5" do %>
   <div class="flex flex-col border rounded  bg-gray-100 shadow-sm w-full self-center justify-center p-3 space-y-5 mb-2">
-    <div class="">Criar novo boleto</div>
+    <div class="flex flex-row w-full justify-between items-center">
+      <div class=" rounded border text-gray-600 border-gray-300 shadow-sm transition-all duration-100 font-bold text-sm px-2 py-1">Meus Boletos</div>
+
+      <%= link_to root_path do %>
+        <div class="text-white rounded bg-red-500 hover:bg-red-600 transition-all duration-100 font-bold text-sm px-2 py-1">Voltar</div>
+      <% end %>
+    </div>
 
     <%= form_with(model: @bank_slip, url: bank_billets_path, method: :post, class: '') do |form| %>
       <div class="flex flex-row w-2/4">
-        <div class="flex flex-col">
-          <%= form.label :amount, class: "text-sm text-gray-600 mb-1" %>
-          <%= form.text_field :amount, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 w-2/4 h-10" %>
+        <div class="flex flex-col h-8 mb-4 space-y-1">
+          <div class=" text-sm">Nome</div>
+          <%= form.text_field :description, class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
         </div>
       </div>
-      <%= form.submit "Criar Boleto" %>
+      <%= form.submit "Criar Boleto", class:"mt-4 text-white rounded bg-green-500 hover:bg-green-600 transition-all duration-100 font-bold text-sm px-2 py-1" %>
     <% end %>
   </div>
 <% end %>
