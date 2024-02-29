@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :bank_slips
+  resources :bank_billets
 
-  root "bank_slips#index"
+  root 'bank_billets#index'
 end

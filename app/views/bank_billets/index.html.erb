@@ -1,8 +1,8 @@
-<%= turbo_frame_tag "bank_slips_menu", class:"flex flex-row self-center w-4/5" do %>
+<%= turbo_frame_tag "bank_billets_menu", class:"flex flex-row self-center w-4/5" do %>
   <div class="flex flex-col border rounded  bg-gray-100 shadow-sm w-full self-center justify-center p-3 space-y-5">
     <div class="flex flex-row w-full justify-between items-center">
       <div class="">Meus boletos</div>
-      <%= link_to new_bank_slip_path do %>
+      <%= link_to new_bank_billet_path do %>
         <div class="text-white rounded bg-green-500 hover:bg-green-600 transition-all duration-100 font-bold text-sm px-2 py-1">Criar Boleto</div>
       <% end %>
     </div>

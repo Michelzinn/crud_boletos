@@ -11,7 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_02_27_191010) do
-  create_table "bank_slips", force: :cascade do |t|
+  create_table "bank_billets", force: :cascade do |t|
     t.string "amount"
     t.date "expire_at"
     t.string "customer_person_name"
