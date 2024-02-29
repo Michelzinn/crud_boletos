@@ -13,6 +13,7 @@
 ActiveRecord::Schema[7.1].define(version: 2024_02_27_191010) do
   create_table "bank_billets", force: :cascade do |t|
     t.string "amount"
+    t.string "description"
     t.date "expire_at"
     t.string "customer_person_name"
     t.string "customer_cnpj_cpf"
@@ -20,7 +21,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_27_191010) do
     t.string "customer_city_name"
     t.string "customer_zipcode"
     t.string "customer_address"
+    t.string "customer_address_complement"
+    t.string "customer_address_number"
     t.string "customer_neighborhood"
+    t.string "customer_person_type"
+    t.string "customer_email"
+    t.string "customer_phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
