@@ -12,8 +12,33 @@ class BankBilletsController < ActionController::Base
   def create
     params.permit!
 
-    service_status = BankBillets::Services::Create.new.call(BoletoSimples::BankBillet, params)
+    bank_billet = BankBillets::Services::Create.new.call(BoletoSimples::BankBillet, params)
 
-    BankBillet.create(params) if service_status == '200'
+    byebug
+    BankBillet.create(permitted_params) if bank_billet.response_errors.blank?
+    byebug
+    
+  end                                       
+
+  private
+
+  def permitted_params
+    params.permit(
+      :description,
+      :amount,
+      :expire_at,
+      :customer_zipcode,
+      :customer_state,
+      :customer_city_name,
+      :customer_neighborhood,
+      :customer_address,
+      :customer_address_number,
+      :customer_address_complement,
+      :customer_cnpj_cpf,
+      :customer_email,
+      :customer_person_name,
+      :customer_person_type,
+      :customer_phone_number
+    )
   end
 end
