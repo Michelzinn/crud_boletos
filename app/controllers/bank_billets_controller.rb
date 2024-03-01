@@ -14,11 +14,10 @@ class BankBilletsController < ActionController::Base
 
     bank_billet = BankBillets::Services::Create.new.call(BoletoSimples::BankBillet, params)
 
-    byebug
     BankBillet.create(permitted_params) if bank_billet.response_errors.blank?
-    byebug
-    
-  end                                       
+
+    redirect_to root_path
+  end
 
   private
 
