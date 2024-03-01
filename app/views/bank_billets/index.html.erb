@@ -7,7 +7,9 @@
         <div class="text-white rounded bg-green-500 hover:bg-green-600 transition-all duration-100 font-bold text-sm px-2 py-1">Criar Boleto</div>
       <% end %>
     </div>
-    <%= render Billet::Component.new %>
+    <% @bank_billets.each do |billet|%>
+      <%= render Billet::Component.new(billet: billet) %>
+    <% end %>
   </div>
 <% end %>
 
