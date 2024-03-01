@@ -2,7 +2,7 @@ class BankBilletsController < ActionController::Base
   layout 'application'
 
   def index
-
+    @bank_billets = BankBillet.all
   end
 
   def new
