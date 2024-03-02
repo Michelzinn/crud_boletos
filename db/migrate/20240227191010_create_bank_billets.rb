@@ -5,6 +5,7 @@ class CreateBankBillets < ActiveRecord::Migration[7.1]
       t.string :description
       t.date :expire_at
 
+      t.string :external_billet_id
       t.string :customer_person_name
       t.string :customer_cnpj_cpf
       t.string :customer_state
