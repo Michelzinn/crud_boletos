@@ -5,6 +5,10 @@ class BankBilletsController < ActionController::Base
     @bank_billets = BankBillet.all
   end
 
+  def show
+
+  end
+
   def new
     @states = States::OPTIONS
   end
@@ -17,6 +21,16 @@ class BankBilletsController < ActionController::Base
     permitted_params_with_external_id = permitted_params.merge(external_billet_id: bank_billet[:id])
 
     BankBillet.create(permitted_params_with_external_id) if bank_billet.response_errors.blank?
+
+    redirect_to root_path
+  end
+
+  def destroy
+    bank_billet = BankBillet.find(params[:id])
+
+    service_response = BoletoSimples::BankBillet.cancel(id: bank_billet.external_billet_id) # transformar em service e com injeção e testar
+
+    bank_billet.destroy! if service_response.response_errors.blank?
 
     redirect_to root_path
   end
