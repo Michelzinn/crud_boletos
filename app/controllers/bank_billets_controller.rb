@@ -14,7 +14,9 @@ class BankBilletsController < ActionController::Base
 
     bank_billet = BankBillets::Services::Create.new.call(BoletoSimples::BankBillet, params)
 
-    BankBillet.create(permitted_params) if bank_billet.response_errors.blank?
+    permitted_params_with_external_id = permitted_params.merge(external_billet_id: bank_billet[:id])
+
+    BankBillet.create(permitted_params_with_external_id) if bank_billet.response_errors.blank?
 
     redirect_to root_path
   end
@@ -37,7 +39,8 @@ class BankBilletsController < ActionController::Base
       :customer_email,
       :customer_person_name,
       :customer_person_type,
-      :customer_phone_number
+      :customer_phone_number,
+      :external_billet_id
     )
   end
 end
