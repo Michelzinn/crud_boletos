@@ -1,0 +1,27 @@
+<%= turbo_frame_tag "bank_billets_menu", class:"flex flex-row self-center w-4/5" do %>
+  <div class="flex flex-col border rounded  bg-gray-100 shadow-sm w-full self-center justify-center p-4 space-y-5 mb-2">
+    <div class="flex flex-row w-full justify-between items-center">
+      <div class=" rounded border  bg-white text-gray-600 border-gray-300 shadow-sm transition-all duration-100 font-bold text-sm px-2 py-1">Criar novo boleto</div>
+
+      <%= link_to root_path do %>
+        <div class="text-white rounded bg-red-500 hover:bg-red-600 transition-all duration-100 font-bold text-sm px-2 py-1">Voltar</div>
+      <% end %>
+    </div>
+
+    <%= form_with(url: bank_billet_path, method: :patch, class: 'space-y-2') do |form| %>
+
+      <div class="flex flex-row w-2/4 mb-4">
+        <div class="flex flex-col h-8 space-y-1">
+          <div class=" text-sm">Descrição</div>
+          <%= form.text_field :description,value: @bank_billet.description , class: "p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-3/4 h-6" %>
+        </div>
+      </div>
+      <div class="">
+        <%= form.submit "Editar Boleto", class:"mt-8 text-white rounded bg-green-500 hover:bg-green-600 transition-all duration-100 font-bold text-sm px-2 py-1" %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+
+

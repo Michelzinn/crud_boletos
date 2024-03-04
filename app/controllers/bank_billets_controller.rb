@@ -1,5 +1,7 @@
 class BankBilletsController < ActionController::Base
   layout 'application'
+  require 'uri'
+  require 'net/http'
 
   def index
     @bank_billets = BankBillet.all
@@ -33,6 +35,16 @@ class BankBilletsController < ActionController::Base
     bank_billet.destroy! if service_response.response_errors.blank?
 
     redirect_to root_path
+  end
+
+  def edit
+    @bank_billet = BankBillet.find(params[:id])
+    @states = States::OPTIONS
+  end
+
+  def update 
+    bank_billet = BankBillet.find(params[:id])
+    bank_billet.update(permitted_params)
   end
 
   private

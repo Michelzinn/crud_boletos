@@ -1,12 +1,13 @@
 <div class="flex flex-row border border-gray-300 bg-white shadow rounded p-2 justify-between">
   <div><%= @billet.description %> | R$ <%= @billet.amount %></div>
   <div class="flex flex-row items-center space-x-3">
-    <div class="py-0.5 px-1 rounded  text-sm text-white font-bold bg-blue-500 hover:bg-blue-600">Editar</div>
+    <%= link_to edit_bank_billet_path(@billet.id) do %>
+      <div class="py-0.5 px-1 rounded text-sm text-white font-bold bg-blue-500 hover:bg-blue-600 transition-all duration-100">Editar</div>
+    <% end %>
 
     <%= form_for @billet, method: :delete, id: 'delete-form' do |f| %>
       <%= f.submit 'Deletar', class: 'py-0.5 px-1 rounded text-sm text-white font-bold bg-red-500 hover:bg-red-600 transition-all duration-100', onclick: 'return confirmDelete()' %>
     <% end %>
-
   </div>
 </div>
 
