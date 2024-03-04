@@ -28,7 +28,7 @@ class BankBilletsController < ActionController::Base
   def destroy
     bank_billet = BankBillet.find(params[:id])
 
-    service_response = BoletoSimples::BankBillet.cancel(id: bank_billet.external_billet_id) # transformar em service e com injeção e testar
+    service_response = BankBillets::Services::Destroy.new.call(BoletoSimples::BankBillet, bank_billet.external_billet_id)
 
     bank_billet.destroy! if service_response.response_errors.blank?
 
